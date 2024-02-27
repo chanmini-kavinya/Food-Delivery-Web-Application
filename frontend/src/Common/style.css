@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+.reg *{
+  margin: 10;
+  padding: 10;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+.reg body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background: linear-gradient(135deg, #009579, #388e3c);
+}
+.reg .container{
+  max-width: 700px;
+  width: 100%;
+  background-color: #fff;
+  padding: 25px 30px;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
+}
+.reg .container .title{
+  font-size: 25px;
+  font-weight: 500;
+  position: relative;
+}
+.reg .container .title::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 30px;
+  border-radius: 5px;
+  background: linear-gradient(135deg, #009579, #388e3c);
+}
+.reg .content form .user-details{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+}
+.reg form .user-details .input-box{
+  margin-bottom: 15px;
+  width: calc(100% / 2 - 20px);
+}
+.reg form .input-box span.details{
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.reg .user-details .input-box input{
+  height: 45px;
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  border-radius: 5px;
+  padding-left: 15px;
+  border: 1px solid #ccc;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+.reg .user-details .input-box input:focus,
+.reg .user-details .input-box input:valid{
+  border-color: #388e3c;
+}
+.reg form .gender-details .gender-title{
+  font-size: 20px;
+  font-weight: 500;
+ }
+ .reg  form .category{
+   display: flex;
+   width: 80%;
+   margin: 14px 0 ;
+   justify-content: space-between;
+ }
+ .reg  form .category label{
+   display: flex;
+   align-items: center;
+   cursor: pointer;
+ }
+ .reg form .category label .dot{
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  margin-right: 10px;
+  background: #d9d9d9;
+  border: 5px solid transparent;
+  transition: all 0.3s ease;
+}
+.reg a{
+  font-size: 16px;
+  color: #009579;
+  text-decoration: none;
+}
+.reg a:hover{
+  text-decoration: underline;
+}
+.reg #dot-1:checked ~ .category label .one,
+.reg  #dot-2:checked ~ .category label .two,
+.reg #dot-3:checked ~ .category label .three{
+   background: #388e3c;
+   border-color: #d9d9d9;
+ }
+ .reg  form input[type="radio"]{
+   display: none;
+ }
+ .reg  form .button{
+   height: 45px;
+   margin: 35px 0
+ }
+ .reg form .button input{
+   height: 100%;
+   width: 100%;
+   border-radius: 5px;
+   border: none;
+   color: #fff;
+   font-size: 18px;
+   font-weight: 500;
+   letter-spacing: 1px;
+   cursor: pointer;
+   transition: all 0.3s ease;
+   background: linear-gradient(135deg,#009579, #388e3c);
+ }
+ .reg  form .button input:hover{
+  /* transform: scale(0.99); */
+  background: linear-gradient(-135deg, #018b71, #338137);
+  }
+ @media(max-width: 584px){
+  .reg .container{
+  max-width: 100%;
+}
+.reg form .user-details .input-box{
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  .reg  form .category{
+    width: 100%;
+  }
+  .reg  .content form .user-details{
+    max-height: 300px;
+    overflow-y: scroll;
+  }
+  .reg  .user-details::-webkit-scrollbar{
+    width: 5px;
+  }
+  }
+  .reg .link{
+    font-size: 17px;
+    text-align: center;
+  }
+ 
+  @media(max-width: 459px){
+    .reg  .container .content .category{
+    flex-direction: column;
+  }
+}
